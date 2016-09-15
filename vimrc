@@ -25,10 +25,12 @@ if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gno
 endif
 syntax on
 "colorscheme itg_flat
+set wildmenu            " graphical autocomplete
 
 let g:airline_theme='zenburn'
+set number              " add line numbers
 set ruler
-set cursorline
+set cursorline          " add highlighter of what line on
 set visualbell
 
 set showcmd             " show partial command in status line
@@ -39,10 +41,13 @@ set ignorecase          " do case insensitive matching
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set expandtab
+set expandtab           " convert tab to spaces
 set backspace=indent,eol,start
 set autoindent
 set laststatus=2
+
+set incsearch           " search as characters are entered
+set hlsearch            " highlight matches
 
 " Easymotion settings
 map <Leader> <Plug>(easymotion-prefix)
