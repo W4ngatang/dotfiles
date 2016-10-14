@@ -49,5 +49,8 @@ set laststatus=2
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 
+map <C-w>< <C-w>10<
+map <C-w>> <C-w>10>
+
 " Easymotion settings
 map <Leader> <Plug>(easymotion-prefix)
