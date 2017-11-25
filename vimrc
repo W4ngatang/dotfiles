@@ -49,8 +49,26 @@ set laststatus=2
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 
-map <C-w>< <C-w>10<
-map <C-w>> <C-w>10>
+map <C-w>< <C-w>5<
+map <C-w>> <C-w>5>
 
 " Easymotion settings
+"   by default <Leader> is \
+"   by default <plug>EasyMotion is <Leader><Leader>
 map <Leader> <Plug>(easymotion-prefix)
+map f <Plug>(easymotion-prefix)
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatusLineFlag()}
+set statusline+=%*
+
+"let g:syntastic_python_checkers=['pyflakes', 'pep8', 'pylint', 'python']
+let g:syntastic_python_checkers=['pep8', 'pylint', 'python']
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_open = 1
+
+" Automatically strip trailing whitespace
+autocmd BufWritePre *.py %s/\s\+$//e
