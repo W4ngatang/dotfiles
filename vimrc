@@ -14,6 +14,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'cdmedia/itg_flat_vim'
+Plugin 'bling/vim-bufferline'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -68,7 +69,11 @@ let g:syntastic_python_checkers=['pep8', 'pylint', 'python']
 "let g:syntastic_always_populate_loc_list = 1
 "let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 
 " Automatically strip trailing whitespace
 autocmd BufWritePre *.py %s/\s\+$//e
+
+" Easy buffer switching
+:nnoremap ; :buffers<CR>:buffer<Space>
+:nnoremap <TAB> :b<Space>
