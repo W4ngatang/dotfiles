@@ -75,5 +75,5 @@ let g:syntastic_check_on_open = 0
 autocmd BufWritePre *.py %s/\s\+$//e
 
 " Easy buffer switching
-:nnoremap ; :buffers<CR>:buffer<Space>
-:nnoremap <TAB> :b<Space>
+:nnoremap ; :buffers<CR>:buffer!<Space>
+:nnoremap <TAB> :b!<Space>
