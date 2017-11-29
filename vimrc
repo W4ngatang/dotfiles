@@ -8,14 +8,17 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'easymotion/vim-easymotion'
-"Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'cdmedia/itg_flat_vim'
 Plugin 'bling/vim-bufferline'
-Plugin 'w0rp/ale'
+if has('nvim')
+    Plugin 'w0rp/ale'
+else
+    Plugin 'scrooloose/syntastic'
+endif
 "Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
