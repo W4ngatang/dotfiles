@@ -8,13 +8,15 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'easymotion/vim-easymotion'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'cdmedia/itg_flat_vim'
 Plugin 'bling/vim-bufferline'
+Plugin 'w0rp/ale'
+"Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -60,16 +62,16 @@ map <Leader> <Plug>(easymotion-prefix)
 map f <Plug>(easymotion-prefix)
 
 " Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatusLineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatusLineFlag()}
+"set statusline+=%*
 
 "let g:syntastic_python_checkers=['pyflakes', 'pep8', 'pylint', 'python']
-let g:syntastic_python_checkers=['pep8', 'pylint', 'python']
+"let g:syntastic_python_checkers=['pep8', 'pylint', 'python']
 "let g:syntastic_always_populate_loc_list = 1
 "let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_check_on_open = 0
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_check_on_open = 0
 
 " Automatically strip trailing whitespace
 autocmd BufWritePre *.py %s/\s\+$//e
