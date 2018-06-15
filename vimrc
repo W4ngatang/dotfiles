@@ -75,6 +75,7 @@ map f <Plug>(easymotion-prefix)
 "let g:syntastic_auto_loc_list = 1
 "let g:syntastic_check_on_wq = 0
 "let g:syntastic_check_on_open = 0
+let g:ale_linters = {'python': ['pylint']}
 
 " Automatically strip trailing whitespace
 autocmd BufWritePre *.py %s/\s\+$//e
@@ -82,3 +83,7 @@ autocmd BufWritePre *.py %s/\s\+$//e
 " Easy buffer switching
 :nnoremap ; :buffers<CR>:buffer!<Space>
 :nnoremap <TAB> :b!<Space>
+
+" Navigate between Ale errors and warnings
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
