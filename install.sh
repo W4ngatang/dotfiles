@@ -5,7 +5,8 @@
 ############################
 
 # Entry point
-dir=~/dotfiles # dotfiles directory
+#dir=~/dotfiles # dotfiles directory
+dir=$(pwd) # get current dotfiles directory
 olddir=$dir/dotfiles_old # old dotfiles backup directory
 files="vimrc tmux.conf" # list of files/folders to symlink in homedir
 
